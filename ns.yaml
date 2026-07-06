@@ -1,6 +1,4 @@
 apiVersion: v1
 kind: Namespace
-  labels:
-    kubernetes.io/metadata.name: elbaph
+metadata:
   name: elbaph
-  
