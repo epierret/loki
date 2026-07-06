@@ -23,7 +23,7 @@ spec:
         - name: loki-volume
           mountPath: /usr/share/nginx/html/index.html
           subPath: index.html
-  volumes:
-    - name: loki-volume
-      configMap:
-        name: loki-cm
+      volumes:
+      - name: loki-volume
+        configMap:
+          name: loki-cm
