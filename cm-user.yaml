@@ -1,14 +1,17 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: loki-user
-  namespace: elbaph          # Changed from argocd
+  name: argocd-cm
+  namespace: argocd
   labels:
-    app: loki                # Fixed label syntax
+    app.kubernetes.io/name: argocd-cm
 data:
+  # Comptes utilisateurs (sans mots de passe, ils sont gérés via CLI)
   accounts.dev-user: apiKey, login
   accounts.dev-user.enabled: "true"
-  accounts.dev-user.password: ""
   
-  accounts.new-dev: login
-  accounts.new-dev.enabled: "true"
+  accounts.dev: login
+  accounts.dev.enabled: "true"
+  
+  # Mode insecure (HTTP) pour l'UI
+  server.insecure: "true"
