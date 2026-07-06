@@ -9,3 +9,6 @@ data:
   accounts.dev-user: apiKey, login
   accounts.dev-user.enabled: "true"
   accounts.dev-user.password: ""
+  
+  accounts.new-dev: login
+  accounts.new-dev.enabled: "true"
